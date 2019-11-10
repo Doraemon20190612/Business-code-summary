@@ -20,13 +20,13 @@ tsne_df_0 = tsne_df[(tsne_df.cluster==0)]
 tsne_df_1 = tsne_df[(tsne_df.cluster==1)]
 
 
-writer=pd.ExcelWriter(r'C:\Users\sb\Desktop\t-SNE KM聚类降维1.xlsx')
+writer=pd.ExcelWriter(r'C:\Users\Administrator\Desktop\t-SNE KM聚类降维1.xlsx')
 tsne_df_0.to_excel(writer,sheet_name = 'sheet0')
 tsne_df_1.to_excel(writer,sheet_name = 'sheet1')
 
-cluster0 = pd.read_excel(r'C:\Users\sb\Desktop\t-SNE KM聚类降维.xlsx',sheetname = 0)
-cluster1 = pd.read_excel(r'C:\Users\sb\Desktop\t-SNE KM聚类降维.xlsx',sheetname = 1)
-cluster2 = pd.read_excel(r'C:\Users\sb\Desktop\t-SNE KM聚类降维.xlsx',sheetname = 2)
+cluster0 = pd.read_excel(r'C:\Users\Administrator\Desktop\t-SNE KM聚类降维.xlsx',sheetname = 0)
+cluster1 = pd.read_excel(r'C:\Users\Administrator\Desktop\t-SNE KM聚类降维.xlsx',sheetname = 1)
+cluster2 = pd.read_excel(r'C:\Users\Administrator\Desktop\t-SNE KM聚类降维.xlsx',sheetname = 2)
 
 from pyecharts import Scatter
 

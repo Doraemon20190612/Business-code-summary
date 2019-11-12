@@ -10,7 +10,7 @@ from wordcloud import get_single_color_func
 
 
 # 读取词频文件
-wc = pd.read_excel('C:\\Users\\sb\\Desktop\\新词云.xlsx',sheetname = 2)
+wc = pd.read_excel('C:\\Users\\Administrator\\Desktop\\新词云.xlsx',sheetname = 2)
 
 # 将DataFrame转换为字典
 wc1 = wc.set_index('word').T.to_dict('int')['num']
@@ -25,7 +25,7 @@ wc2 = wordcloud.WordCloud(font_path = 'C:\\Windows\\Fonts\\msyh.ttc',
                           background_color = 'white',mask = imread('C:\\Users\\sb\\Desktop\\新词云3.jpg')).fit_words(wc1)
 
 # 美化色系（色系模仿）
-imgarray = np.array(imread('C:\\Users\\sb\\Desktop\\新词云3.jpg'))
+imgarray = np.array(imread('C:\\Users\\Administrator\\Desktop\\新词云3.jpg'))
 imgcolors = wordcloud.ImageColorGenerator(imgarray)
 wc2.recolor(color_func = imgcolors)
 
@@ -59,7 +59,7 @@ plt.axis('off')
 plt.show()
 
 # 导出图片
-wc2.to_file('C:\\Users\\sb\\Desktop\\sheet.png')
+wc2.to_file('C:\\Users\\Administrator\\Desktop\\sheet.png')
 
 
 
@@ -129,4 +129,4 @@ plt.axis('off')
 plt.show()
 
 # 导出图片
-wc2.to_file('C:\\Users\\sb\\Desktop\\sheet.png')
+wc2.to_file('C:\\Users\\Administrator\\Desktop\\sheet.png')

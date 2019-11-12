@@ -3,9 +3,9 @@ import pandas as pd
 import jieba
 
 
-txt_0 = pd.DataFrame(pd.read_excel(r'C:\Users\sb\Desktop\Patient Flow Online\2018Topic.xlsx',sheetname = 8)['text'])
+txt_0 = pd.DataFrame(pd.read_excel(r'C:\Users\Administrator\Desktop\Patient Flow Online\2018Topic.xlsx',sheetname = 8)['text'])
 
-stop_words = list(pd.read_csv(r'C:\Users\sb\Desktop\Patient Flow Online\词库\Patient Flow Online停用词表.txt',
+stop_words = list(pd.read_csv(r'C:\Users\Administrator\Desktop\Patient Flow Online\词库\Patient Flow Online停用词表.txt',
                              names = ['word'],sep = 'aaa',encoding = 'UTF-8-sig').word)
 jieba.load_userdict = r'C:\Users\sb\Desktop\Patient Flow Online\词库\Patient Flow Online词库.txt'
 
